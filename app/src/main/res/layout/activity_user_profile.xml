@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/profile_picture"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="15dp">
+
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:contentDescription="@string/profile_picture"
+                android:src="@drawable/default_dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:layout_marginStart="50dp"
+                android:onClick="onChangePhotoClicked"
+                android:text="@string/change"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/name"/>
+
+        <EditText
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="@string/your_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/email"/>
+
+        <EditText
+            android:id="@+id/profile_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:hint="@string/your_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/phone"/>
+
+        <EditText
+            android:id="@+id/profile_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="phone"
+            android:hint="@string/your_phone_number"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/gender"/>
+
+        <RadioGroup
+            android:id="@+id/profile_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/profile_female_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:text="@string/female"
+                tools:ignore="VisualLintButtonSize" />
+
+            <RadioButton
+                android:id="@+id/profile_male_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:text="@string/male"
+                tools:ignore="VisualLintButtonSize" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/class_label"/>
+
+        <EditText
+            android:id="@+id/profile_class_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/eg_2019"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/major"/>
+
+        <EditText
+            android:id="@+id/profile_major"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/your_major"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:onClick="onSaveClicked"
+                android:layout_marginEnd="10dp"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                style="?android:attr/buttonBarStyle"/>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:onClick="onCancelClicked"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:onClick="onResetClicked"
+                android:layout_marginEnd="10dp"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                style="?android:attr/buttonBarStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
